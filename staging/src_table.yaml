@@ -1,0 +1,8 @@
+version: 2
+
+sources :
+  - name : wrexpert
+    database: wrexpert
+    tables:
+      - name : negotia_1
+      - name: orders
