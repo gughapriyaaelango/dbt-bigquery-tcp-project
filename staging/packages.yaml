@@ -1,0 +1,11 @@
+packages:
+  - package: fivetran/github
+    version: 0.1.1
+  - package: fishtown-analytics/dbt_utils
+    version: 0.6.2
+  - package: fivetran/github
+    version: 0.1.1
+  - git: <github link>
+    version: master
+  - local: sub-project
+
