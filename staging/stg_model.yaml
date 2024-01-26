@@ -1,0 +1,28 @@
+version : 2
+
+models:
+  - name: stg_customers
+    description: one unique customer per row
+    columns:
+    - name: customer_id
+      description: this is the primary key
+      tests:
+        - unique
+        - not null
+
+  - name: stg_orders
+    description: one order per customer
+    columns:
+    - name: order_id
+      description: the primary key for stg_orders
+      tests:
+        - unique
+        - not null
+    - name: status
+      description : '{{doc ("doc_file")}}'
+      tests:
+       - accepted_value:
+          value:
+            - shipped
+            - completed
+            - return_pending
